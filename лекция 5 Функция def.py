@@ -49,7 +49,7 @@ high_man()
 #Урок 5 задание 3 не четкое сравнение элементов
 
 def compare(S1, S2):
-    ngrams = [S1[i+i:3] for i in range(len(S1))]
+    ngrams = [S1[i:i+3] for i in range(len(S1))]
     count = 0
     for ngram in ngrams:
         count += S2.count(ngram)
@@ -62,5 +62,10 @@ Group=[['Петров', 1988,10,2, 175, 80],
 S1 = Group[0][0]
 S2 = Group[1][0]
 c = compare (S1, S2)
+
+
+
     
 print (c, S1, S2)
+
+
